@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+    <title>PokéMatch ém</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="how-to-start">Pick a tile to start the game!</div>
+      <section class="heading">
+        <div class="logo-wrapper">
+          <img class="logo" src="./images/pokelogo.png" alt="pokemon logo">
+        </div>
+        <div class="info">
+          <span id="selectedLevel">Level 3</span>
+          <span>MOVES: <span id="numOfMoves">000</span></span>
+          <span>TIME: <span id="totalTime">00:00</span></span>
+        </div>
+      </section>
+      <section class="board-wrapper">
+        <div id="board">
+
+        </div>
+      </section>
+      <section class="buttons">
+        <div id="settings" class="settings hide-menu">
+          <h2>LEVEL SELECT</h2>
+          <div class="levels">
+            <div class="level">
+              <input type="radio" name="level" id="6" value="LEVEL 1" data-try-score="6" data-max-time="25"
+                data-max-moves="16" checked>
+              <label for="6">1 (TILES x 12)</label>
+            </div>
+            <div class="level">
+              <input type="radio" name="level" id="8" value="LEVEL 2" data-try-score="4" data-max-time="30"
+                data-max-moves="20">
+              <label for="8">2 (TILES x 16)</label>
+            </div>
+            <div class="level">
+              <input type="radio" name="level" id="10" value="LEVEL 3" data-try-score="2" data-max-time="35"
+                data-max-moves="32">
+              <label for="10">3 (TILES x 20)</label>
+            </div>
+          </div>
+          <button id="okayBtn">OK</button>
+        </div>
+        <button id="resetBtn"><i class="fa-solid fa-rotate-left"></i></button>
+        <button id="settingsBtn"><i class="fa-solid fa-gear"></i></button>
+        <button id="hiScoresBtn"><i class="fa-solid fa-trophy"></i></button>
+      </section>
+      <div class="win">
+        <div class="win__img">
+          <img src="" id="winImg" alt="pikachu showing emotions">
+        </div>
+        <p id="winText" class="win__text">GREAT JOB!</p>
+        <div class="win__info">
+          <div class="left">
+            <span>TILE SCORE: <span id="tileScore">00</span></span>
+            <span>TIME SCORE: <span id="timeScore">00</span></span>
+            <span>MOVE SCORE: <span id="moveScore">00</span></span>
+            <span>TOTAL SCORE: <span id="totalScore">100</span></span>
+          </div>
+          <div class="right">
+            <span class="rating-code" id="rating">A</span>
+          </div>
+        </div>
+        <button id="playBtn">PLAY AGAIN</button>
+      </div>
+      <div id="topScores" class="top-scores">
+        <table class="top-scores__table">
+          <tr>
+            <th>LEVEL</th>
+            <th>HI-SCORE</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td id="lvl1TopScore">-</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td id="lvl2TopScore">-</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td id="lvl3TopScore">-</td>
+          </tr>
+        </table>
+        <div class="top-scores__buttons">
+          <button id="clearBtn" class="clear-btn">RESET HI-SCORES</button>
+          <div class="questions hide"><span>ARE YOU SURE?</span><button id="yesBtn">YES</button><button
+              id="noBtn">NO</button></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+
+</html>
